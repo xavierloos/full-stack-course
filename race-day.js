@@ -10,5 +10,7 @@ if (registeredEarly && runnerAge >= 18) {
   console.log(`You will race at 9:30 am.Race number ${raceNumber}`)
 }else if(!registeredEarly && runnerAge >=18){
   console.log(`You will race at 11:00 am.Race number ${raceNumber}`)
+}else{
+  console.log(`You will race at 12:00 am.Race number ${raceNumber}`)
 }
 
