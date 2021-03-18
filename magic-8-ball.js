@@ -33,4 +33,5 @@ switch(randomNumber){
   case 7:
     eightBall = 'Signs point to yes'
     break;
+  
 }
