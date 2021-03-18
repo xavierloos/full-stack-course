@@ -5,3 +5,5 @@ const userQuestion = "Will I become a werewolf tonight? ";
 console.log(userQuestion)
 
 let randomNumber = Math.floor(Math.random() * 8)
+
+let eightBall = ""
