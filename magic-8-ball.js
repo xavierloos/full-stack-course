@@ -32,6 +32,7 @@ switch(randomNumber){
     break;
   case 7:
     eightBall = 'Signs point to yes'
-    break;
-  
+    break; 
 }
+
+console.log(eightBall)
