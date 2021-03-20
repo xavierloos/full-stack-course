@@ -10,6 +10,7 @@
 // 10. Next, write yet another if statement for if the userChoice is 'scissors'. 
 // 11. Don’t forget to test your function!
 // 12. Everything is set up. Now you need to start the game and log the results.
+// 13. Finally, let’s determine who won.
 const getUserChoice = userInput =>{
   userInput = userInput.toLowerCase();
   if(userInput==='rock' || userInput==='paper'|| userInput==='scissors'){
@@ -60,4 +61,9 @@ const dermineWinner=(userChoice, computerChoice)=>{
 function playGame(){
   const userChoice = getUserChoice('rock');
   const computerChoice = getComputerChoice();
+  console.log(`User choice: ${userChoice}`)
+  console.log(`Computer choice: ${computerChoice}`)
+  console.log(dermineWinner(userChoice,computerChoice));
 }
+
+playGame()
