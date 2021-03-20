@@ -11,9 +11,10 @@
 // 11. Don’t forget to test your function!
 // 12. Everything is set up. Now you need to start the game and log the results.
 // 13. Finally, let’s determine who won.
+// 14. Make this game better by adding a secret cheat code. If a user types 'bomb' as their choice, then make sure they win, no matter what.
 const getUserChoice = userInput =>{
   userInput = userInput.toLowerCase();
-  if(userInput==='rock' || userInput==='paper'|| userInput==='scissors'){
+  if(userInput==='rock' || userInput==='paper'|| userInput==='scissors' || userInput==='bomb'){
     return userInput
   }
   console.log('Invalid option')
@@ -55,11 +56,13 @@ const dermineWinner=(userChoice, computerChoice)=>{
     }else{
       return 'User won'
     }
+  }else if(userChoice==='bomb'){
+      return 'Both won'
   }
 }
 
 function playGame(){
-  const userChoice = getUserChoice('rock');
+  const userChoice = getUserChoice('bomb');
   const computerChoice = getComputerChoice();
   console.log(`User choice: ${userChoice}`)
   console.log(`Computer choice: ${computerChoice}`)
