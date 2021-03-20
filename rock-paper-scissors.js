@@ -6,6 +6,7 @@
 // 6. Test the function by calling it multiple times and printing the results to the console. You can delete this when you know your function works.
 // 7. Now it’s time to determine a winner.
 // 8. If the game is not a tie, you’ll need to determine a winner.
+// 9. Next, write another if statement for if the userChoice is 'paper'.
 const getUserChoice = userInput =>{
   userInput = userInput.toLowerCase();
   if(userInput==='rock' || userInput==='paper'|| userInput==='scissors'){
@@ -34,6 +35,12 @@ const dermineWinner=(userChoice, computerChoice)=>{
     return 'The game was a tie'
   }else if(userChoice==='rock'){
     if(computerChoice==='paper'){
+      return 'Computer won'
+    }else{
+      return 'User won'
+    }
+  }else if(userChoice==='paper'){
+    if(computerChoice==='scissors'){
       return 'Computer won'
     }else{
       return 'User won'
