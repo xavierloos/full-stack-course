@@ -4,6 +4,7 @@
 // 4. Test the function by calling it with valid and invalid input, and printing the results to the console. You can delete this when you know your function works.
 // 5. Now we need to have the computer make a choice.
 // 6. Test the function by calling it multiple times and printing the results to the console. You can delete this when you know your function works.
+// 7. Now it’s time to determine a winner.
 const getUserChoice = userInput =>{
   userInput = userInput.toLowerCase();
   if(userInput==='rock' || userInput==='paper'|| userInput==='scissors'){
@@ -24,5 +25,11 @@ const getComputerChoice =()=>{
     case 2:
       return 'scissors'
       break
+  }
+}
+
+const dermineWinner=(userChoice, computerChoice)=>{
+  if(userChoice===computerChoice){
+    return 'The game was a tie'
   }
 }
