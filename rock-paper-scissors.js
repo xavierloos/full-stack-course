@@ -8,6 +8,7 @@
 // 8. If the game is not a tie, you’ll need to determine a winner.
 // 9. Next, write another if statement for if the userChoice is 'paper'.
 // 10. Next, write yet another if statement for if the userChoice is 'scissors'. 
+// 11. Don’t forget to test your function!
 const getUserChoice = userInput =>{
   userInput = userInput.toLowerCase();
   if(userInput==='rock' || userInput==='paper'|| userInput==='scissors'){
