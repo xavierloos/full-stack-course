@@ -6,6 +6,8 @@
 // - Get the ideal sleep hours that you prefer
 // - Calculate the sleep debt, if any.
 // 5. Inside the getActualSleepHours() function, call the getSleepHours() function for each day of the week.Add the results together and return the sum using an implicit return.
+// 6. To get the ideal sleep hours that you prefer, create a function named getIdealSleepHours with no parameters. You’ll want to multiply by 7 to get the total hours you prefer per week.
+
 const getSleepHours = day => {
   switch (day) {
     case 'monday':
@@ -40,4 +42,8 @@ const getActualSleepHours = () => {
   sum += getSleepHours('saturday')
   sum += getSleepHours('sunday')
   return sum
+}
+const getIdealSleepHours = () => {
+  const idealHours = 9
+  return idealHours * 7
 }
