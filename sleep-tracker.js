@@ -9,6 +9,10 @@
 // 6. To get the ideal sleep hours that you prefer, create a function named getIdealSleepHours with no parameters. You’ll want to multiply by 7 to get the total hours you prefer per week.
 // 7. Test your two new functions by calling them and printing the results to the console. You can remove the tests when you know your functions works.
 // 8.Now that you can get the actual sleep hours and the ideal sleep hours, it’s time to calculate sleep debt.
+// 9.Now that you have actualSleepHours and idealSleepHours, you can write a few if/else statements to output the result to the console. The function should fulfill this logic:
+// - If actual sleep equals ideal sleep, log to the console that the user got the perfect amount of sleep.
+// - If the actual sleep is greater than the ideal sleep, log to the console that the user got more sleep than needed.
+// - If the actual sleep is less than the ideal sleep, log to the console that the user should get some rest.
 
 const getSleepHours = day => {
   switch (day) {
@@ -52,5 +56,11 @@ const getIdealSleepHours = () => {
 const calculateSleepDebt = () => {
   let actualSleepHours = getActualSleepHours()
   let idealSleepHours = getIdealSleepHours()
-
+  if (actualSleepHours === idealSleepHours) {
+    console.log(`You got the perfect amount of sleep`)
+  } else if (actualSleepHours > idealSleepHours) {
+    console.log(`You got more sleep than needed`)
+  } else if (actualSleepHours < idealSleepHours) {
+    console.log(`You should get  some rest.`)
+  }
 }
