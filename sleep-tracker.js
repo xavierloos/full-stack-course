@@ -15,6 +15,9 @@
 // - If the actual sleep is less than the ideal sleep, log to the console that the user should get some rest.
 // 10. To make this calculator more helpful, add the hours the user is over or under their ideal sleep in each log statement in calculateSleepDebt().
 // 11. On the last line of the program, start the program by calling the calculateSleepDebt() function.
+// 12. For extra practice, try these:
+// - getActualSleepHours() could be implemented without calling getSleepHours(). Use literal numbers and the + operator to rewrite getActualSleepHours(). It should still return the total actual hours slept in the week.
+// - Some people need to sleep longer than others. Rewrite getIdealSleepHours() so that you can pass it an argument, like getIdealSleepHours(8) where 8 is the ideal hours per night. Update the call to getIdealSleepHours() in calculateSleepDebt() too.
 
 const getSleepHours = day => {
   switch (day) {
@@ -41,23 +44,13 @@ const getSleepHours = day => {
       break
   }
 }
-const getActualSleepHours = () => {
-  let sum = getSleepHours('monday')
-  sum += getSleepHours('tuesday')
-  sum += getSleepHours('wednesday')
-  sum += getSleepHours('thurday')
-  sum += getSleepHours('friday')
-  sum += getSleepHours('saturday')
-  sum += getSleepHours('sunday')
-  return sum
-}
-const getIdealSleepHours = () => {
-  const idealHours = 9
-  return idealHours * 7
-}
+const getActualSleepHours = () => 6 + 7 + 9 + 8 + 5 + 10 + 11;
+
+const getIdealSleepHours = idealHours => idealHours * 7
+
 const calculateSleepDebt = () => {
   let actualSleepHours = getActualSleepHours()
-  let idealSleepHours = getIdealSleepHours()
+  let idealSleepHours = getIdealSleepHours(7)
   let difference = actualSleepHours - idealSleepHours
   if (actualSleepHours === idealSleepHours) {
     console.log(`You got the perfect amount of sleep`)
