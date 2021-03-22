@@ -13,6 +13,7 @@
 // - If actual sleep equals ideal sleep, log to the console that the user got the perfect amount of sleep.
 // - If the actual sleep is greater than the ideal sleep, log to the console that the user got more sleep than needed.
 // - If the actual sleep is less than the ideal sleep, log to the console that the user should get some rest.
+// 10. To make this calculator more helpful, add the hours the user is over or under their ideal sleep in each log statement in calculateSleepDebt().
 
 const getSleepHours = day => {
   switch (day) {
@@ -56,11 +57,12 @@ const getIdealSleepHours = () => {
 const calculateSleepDebt = () => {
   let actualSleepHours = getActualSleepHours()
   let idealSleepHours = getIdealSleepHours()
+  let difference = actualSleepHours - idealSleepHours
   if (actualSleepHours === idealSleepHours) {
     console.log(`You got the perfect amount of sleep`)
   } else if (actualSleepHours > idealSleepHours) {
-    console.log(`You got more sleep than needed`)
+    console.log(`You got ${difference} hours more sleep than needed`)
   } else if (actualSleepHours < idealSleepHours) {
-    console.log(`You should get  some rest.`)
+    console.log(`You should get ${difference} hours more to rest`)
   }
 }
