@@ -8,3 +8,5 @@ console.log(secretMessage.length)
 secretMessage.push('to', 'Program')
 // 4. Change the word easily to the word right by accessing the index and replacing it.
 secretMessage[secretMessage.indexOf('easily')] = 'right'
+// 5. Use an array method to remove the first string of the array.
+secretMessage.shift()
