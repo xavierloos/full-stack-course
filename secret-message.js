@@ -4,3 +4,5 @@ let secretMessage = ['Learning', 'is', 'not', 'about', 'what', 'you', 'get', 'ea
 secretMessage.pop()
 // 2. Great! You can check your work by logging the .length of the array.
 console.log(secretMessage.length)
+// 3. Use an array method to add the words 'to' and 'Program' as separate strings to the end of the 'secretMessage' array.
+secretMessage.push('to', 'Program')
